@@ -32,7 +32,6 @@ header h2 {
 }
 
 .card {
-  border-top: cyan solid 3px;
   border-radius: 5px;
   box-shadow: 5px 5px 20px #888888;
   padding: 10px 20px;
@@ -47,7 +46,7 @@ header h2 {
   font-size: 12px;
   color: gray;
 }
-.card img {
+.card .img {
   display: flex;
   width: 100%;
   justify-content: flex-end;
@@ -55,16 +54,20 @@ header h2 {
 
 .supervisor {
   grid-area: supervisor;
+  border-top: cyan solid 3px;
 }
 
 .calculator {
   grid-area: calculator;
+  border-top: blue solid 3px;
 }
 
 .team-builder {
   grid-area: team-builder;
+  border-top: red solid 3px;
 }
 
 .karma {
   grid-area: karma;
+  border-top: yellow solid 3px;
 }/*# sourceMappingURL=style.css.map */
