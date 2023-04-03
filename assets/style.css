@@ -1,30 +1,74 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@media only screen and (min-width: 1024px) {
+  body {
+    margin: auto;
+  }
+  .container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 0.75fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 25px;
+    grid-auto-flow: row;
+    grid-template-areas: "supervisor team-builder calculator" "supervisor karma calculator";
+    align-items: center;
+    justify-items: center;
+  }
+  .card {
+    justify-items: start;
+  }
+  .supervisor {
+    grid-area: supervisor;
+  }
+  .calculator {
+    grid-area: calculator;
+  }
+  .team-builder {
+    grid-area: team-builder;
+  }
+  .karma {
+    grid-area: karma;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  /*
+  .container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-around;
+    gap: 10px;
+  }
+  */
+  .container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    grid-auto-flow: row;
+    grid-template-areas: "supervisor" "calculator" "team-builder" "karma";
+    align-items: center;
+    justify-items: center;
+  }
+}
 body {
   font-family: "Poppins", sans-serif;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr 0.75fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 25px;
-  grid-auto-flow: row;
-  grid-template-areas: "supervisor team-builder calculator" "supervisor karma calculator";
-  margin: 2% 15%;
-  align-items: center;
-  justify-items: center;
 }
 
 header {
   text-align: center;
   padding-left: 15%;
   padding-right: 15%;
+  margin-bottom: 5%;
 }
 header h1 {
   font-weight: lighter;
+  font-size: 24px;
 }
 header .bold {
   font-weight: 900;
+  margin: 0px;
 }
 header h2 {
   font-size: 16px;
@@ -37,14 +81,14 @@ header h2 {
   padding: 10px 20px;
   width: 300px;
   height: 200px;
-  justify-items: start;
 }
 .card h3 {
   font-weight: 900;
 }
 .card p {
-  font-size: 12px;
+  font-size: 16px;
   color: gray;
+  margin-bottom: 10px;
 }
 .card .img {
   display: flex;
@@ -53,21 +97,17 @@ header h2 {
 }
 
 .supervisor {
-  grid-area: supervisor;
   border-top: cyan solid 3px;
 }
 
 .calculator {
-  grid-area: calculator;
   border-top: blue solid 3px;
 }
 
 .team-builder {
-  grid-area: team-builder;
   border-top: red solid 3px;
 }
 
 .karma {
-  grid-area: karma;
   border-top: yellow solid 3px;
 }/*# sourceMappingURL=style.css.map */
